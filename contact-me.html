@@ -1,0 +1,107 @@
+<html> 
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <style type="text/css" id="dcoder_stylesheet">#contact {padding : 20px;
+border-bottom: 3px solid black;}
+
+
+
+
+
+
+
+.hv{text-align : center;
+font-size: 3rem;
+border-bottom: 3px solid black;
+padding: 20px;}
+#contact-form {
+     font-family: 'Dancing Script', cursive;
+font-family: 'Itim', cursive;
+font-family: 'Josefin Sans', sans-serif;
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="number"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#contact-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: white;
+  color: black;
+  border : 2px solid black;
+  }
+
+@media (max-width: 500px) {
+  #contact-form {
+    width: 80%;
+  }
+}
+
+#ss{margin-top:20px;
+font-color:red;}</style></head> 
+ <body> 
+  <div id="contact"> 
+   <h1 class="hv">Contact me</h1> 
+   <form name="submit-to-google-sheet" id="contact-form"> 
+    <div> <label>Name:</label> 
+     <input id="name" name="name" required type="text"> 
+    </div> 
+    <div> <label>Email:</label> 
+     <input id="email" name="email" required type="email"> 
+    </div> 
+    <div> <label>Message:</label> <textarea id="message" name="message" required rows="5"></textarea> 
+    </div> <button type="submit" id="submitb">Send massage</button> 
+    <br> <span id="ss"></span> 
+   </form> 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">const scriptURL = 'https://script.google.com/macros/s/AKfycby9k4wfZH2szdBgUtxpbx8zstJja9l0vOouUpvTsUPcAs8sx_-v6VGX-Oy64v67MRIglA/exec'
+  const form = document.forms['submit-to-google-sheet']
+const sus = document.getElementById('ss');
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         sus.innerHTML="Your message successfully sent. Someone from our team answer you as soon as possible";
+  setTimeout(function()
+  {
+    sus.innerHTML="";
+  },6000)
+  form.reset();
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+  
+  const playSound = () => {
+  const audio = new Audio("tap.mp3");
+  audio.play();
+};
+
+document.querySelector("#submitb").addEventListener("click", playSound);</script></body></html>
