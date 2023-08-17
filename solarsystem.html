@@ -1,0 +1,519 @@
+<!doctype html>
+<html leng="in"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <script src="https://kit.fontawesome.com/abca6c4aae.js" crossorigin="anonymous"></script> 
+  <meta name="discription" content="This is animation of our solar system and you can know about moon and earth this site is animation best for childern to know about earth and moon. And you can  read information in english and hindi as well as."> 
+ <style type="text/css" id="dcoder_stylesheet">body{
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+.np{display: none;}
+.space{
+  font-size: 10px;
+  width: 40em;
+  height: 50em;
+  position: relative;
+}
+
+.sun{
+  position: absolute;
+  top: 15em;
+  left: 15em;
+  height: 10em;
+  width: 10em;
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgos49LfRY8vZSnFxOMxzljuFAcS3URCyNNom2YYw1w3iijc_dbdAhl7kpv2yaMwqpyvZ8oYDoZuaj0ioZADEyyYE-JuBn8RHjfEQlkW2Y5y1flJ2Kz7dUFRYbcwHZnRErqqRJEQgymxkKP_rbQY26e3Khg6reBQ5wz4dadyt5tSR2OScNJVZcKW2ijdV54/s399/IMG_20230816_135204.png');
+  border-radius: 50%;
+  box-shadow: 0 0 3em white;
+  background-size: cover;
+background-repeat: no-repeat;
+cursor:pointer;
+}
+
+
+.earth,.moon{
+  position: absolute;
+ border-style: solid;
+  border-color: white transparent transparent transparent;
+border-width: 0.4em 0.4em 0 0;
+border-radius: 50%;
+}
+
+.earth{
+  top: 5em;
+  left: 5em;
+  height: 30em;
+  width: 30em;
+  animation: orbit 36.5s linear infinite;
+  }
+
+
+
+.moon{
+  cursor:pointer;
+    top: 0;
+  right: 0;
+  width: 8em;
+  height: 8em;
+  animation: orbit 2.7s linear infinite;
+}
+
+
+.earth::before,
+.moon::before
+{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+} 
+
+.earth::before{
+  top: 2.8em;
+  right: 2.8em;
+  width: 3em;
+  height: 3em;
+ // background-color: aqua;
+  animation: DayNight 2.3s linear infinite;
+background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgImv6W33drmytaWb_RpTCwhT3CqITdeOPGzfAK7r_Xj3zagk-eaBQevOxTnjGHFdcLMlmej0ztEJDPml98cmt8tvm_qEUv_UpYsofcnxuHh0xIeIW5vSRXXu7ptdZ1jRaRoRyujhZKhN_Bmb24De_92pKSgT18hgwbM9ecFm_irpgfuJPTeX152XI6Lg/s612/simplified-world-map-vector-illustration.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+} 
+
+.moon::before{
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4HVKJeTOf2PGfvA43TmE-3D8YxDJavR7YP4Kmmc5WkdMFiRRI9y-Nhj2XAz7PM9y99qkuD6z0jo2AuU2A7yLZvEWhm-ezY_gL1RokeSnm9OclrO8DoDepQoi05ztGfYAyaRK2NRV0I20LMZ6oQJrBx0sUDQy1Ebq1_QkXzaHWgv9fUpyhoe-TDw-u7I50/s720/moon-4917183_960_720.png');
+background-size: cover;
+background-repeat: no-repeat;
+} 
+
+
+
+@keyframes DayNight
+  {
+    100%{ transform : rotate(360deg);
+      
+    }
+  }
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Alerts*/
+  
+  
+ 
+ .alert2 {
+  position: absolute;
+  top: 45vh;
+  left: 40vw;
+  background-color: black;
+ color: white;
+ margin: 6px;
+ border-radius: 10px;
+ height: auto;
+ width : 45vw;
+ justify-content: center;
+ border : 1px solid white;
+ display : none;
+   
+ }
+
+.alert {
+  position: absolute;
+  top: 25vh;
+  left: 30vw;
+  background-color: black;
+ color: white;
+ margin: 6px;
+ border-radius: 10px;
+ height: auto;
+ width : 45vw;
+ justify-content: center;
+ border : 1px solid white;
+ display: none;
+}
+ 
+.sun1{
+  height: 250px;
+  width: 45vw;
+   
+  }
+ 
+.alert p1{
+  font-weight: bold;
+  font-size : 1.5rem;
+  color: black;
+  width : 45vw; 
+   background-color: white; 
+}
+
+.alert2 p1{
+  font-weight: bold;
+  font-size : 1.5rem;
+  color: black;
+  width : 45vw; 
+}
+
+.p1{ 
+  border-radius : 10px;
+  padding : 10px;
+  font-weight: bold;
+  font-size : 1.6rem;
+  background-color: white;
+  width : 43vw;
+  border-bottom: none; 
+  border-bottom-left-radius: 0px; 
+  border-bottom-right-radius: 0px; 
+}
+
+.alert p2{
+  text-align: left;
+  font-size : 1.5rem;
+}
+
+.alert2 p2{
+  text-align: left;
+  font-size : 1.5rem;
+}
+
+.p2{
+  padding: 10px;
+  border-top: 1px solid white;
+}
+
+.closebtn{
+  float:right;
+  background: none;
+  color: red;
+ color: none;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.closebtn li{background: none;}
+
+.closebtn2{
+  float:right;
+  background: none;
+  color: red;
+ color: none;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.closebtn2 li{background: none;}
+
+
+.translate {color: white;
+background-color: black;
+font-size: 2rem;
+margin: 8px;
+padding : 5px;
+padding-right : 10px;
+padding-left : 10px;
+float: right;
+border: 2px solid white;
+border-radius: 8px;
+cursor: pointer;}
+
+.translate:hover{border-color: red;
+background-color: white;
+color: black;}
+
+.translateE {color: white;
+background-color: black;
+font-size: 2rem;
+margin: 8px;
+padding : 5px;
+padding-right : 10px;
+padding-left : 10px;
+float: right;
+border: 2px solid white;
+border-radius: 8px;
+cursor: pointer;
+display: none;}
+
+.translateE:hover{border-color: red;
+background-color: white;
+color: black;}
+ 
+ /* Moon */
+
+
+.translate2 {color: white;
+background-color: black;
+font-size: 2rem;
+margin: 8px;
+padding : 5px;
+padding-right : 10px;
+padding-left : 10px;
+float: right;
+border: 2px solid white;
+border-radius: 8px;
+cursor: pointer;}
+
+.translate2:hover{border-color: red;
+background-color: white;
+color: black;}
+
+.translate2E {color: white;
+background-color: black;
+font-size: 2rem;
+margin: 8px;
+padding : 5px;
+padding-right : 10px;
+padding-left : 10px;
+float: right;
+border: 2px solid white;
+border-radius: 8px;
+cursor: pointer;
+display: none;}
+
+.translate2E:hover{border-color: red;
+background-color: white;
+color: black;}
+
+/* The review */
+  
+
+ 
+.alert3 {
+  position: absolute;
+  top: 5vh;
+  left: 30vw;
+  background-color: black;
+ color: white;
+ margin: 6px;
+ border-radius: 10px;
+ height: auto;
+ width : 45vw;
+ justify-content: center;
+ border : 1px solid white;
+ display: none;
+}
+ 
+.sun1{
+  height: 250px;
+  width: 45vw;
+   
+  }
+ 
+.alert p1{
+  font-weight: bold;
+  font-size : 1.5rem;
+  color: red;
+  width : 45vw; 
+   background-color: white; 
+
+}
+
+.alert3 p1{
+  font-weight: bold;
+  font-size : 1.5rem;
+  color: black;
+  width : 45vw; 
+ 
+}
+
+.p1{ 
+  border-radius : 10px;
+  padding : 10px;
+  font-weight: bold;
+  font-size : 1.6rem;
+  background-color: white;
+  width : 43vw;
+  border-bottom: none; 
+  border-bottom-left-radius: 0px; 
+  border-bottom-right-radius: 0px; 
+}
+
+.alert p2{
+  text-align: left;
+  font-size : 1.5rem;
+}
+
+.alert3 p2{
+  text-align: left;
+  font-size : 1.5rem;
+}
+
+.p2{
+  padding: 10px;
+  border-top: 1px solid white;
+}
+
+.closebtn3{
+  float:right;
+  background: none;
+  color: red;
+ color: none;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.closebtn3 li{background: none;}
+
+.rvu {color: white;
+background-color: black;
+font-size: 2rem;
+margin: 8px;
+padding : 5px;
+padding-right : 10px;
+padding-left : 10px;
+float: right;
+border: 2px solid white;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.rvu:hover{border-color: red;
+background-color: white;
+color: black;}</style></head> 
+ <body> 
+  <div class="space"> 
+   <div class="sun"></div> 
+   <div class="earth"> 
+    <div class="moon"></div> 
+   </div> 
+  </div> 
+  <div class="alert"> 
+   <div class="p1"> <p1 class="hdh">
+      The Planet Earth 
+    </p1> <button class="closebtn"><li class="fas fa-close"></li></button> 
+   </div> 
+   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCpfOAk7_H3hG5wNAb4tPDsxp8fbcbPNQDmDzCqOgelEOI_vQNvPGvWDa-L3J1bof94iWmD62VtbrDPLWbCYULCQb3W2hNOdfHafCHcp3HODWcvzMoHHJDH8mFdEkoX7ggU0e4kUwB2Cin5Ghasqnc7z6fB_Dbfy9vDdiQd8WKyyqXfdaGubOUVDCsMUsV/s341/Earth-Day-350x196.jpg" class="sun1"> 
+   <br> 
+   <div class="p2"> <p2 class="pth">
+      This is our home planet named earth.IT is only planet in solar system which has life. This planet is home of 8 Billion humans and 100 billions of animals. Earth rotats around sun and it's axis as you can in this animation. 
+    </p2> 
+   </div> 
+   <br> <button class="translate">Hindi</button> <button class="translateE">English</button> 
+  </div> <!-- The moon --> 
+  <div class="alert2"> 
+   <div class="p1"> <p1 class="hdh">
+      The Moon 
+    </p1> <button class="closebtn2"><li class="fas fa-close"></li></button> 
+   </div> 
+   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjONLCDTPoBBmPS7efsxlA-mTJLT6qrUaEDHZ814fp8XZy5XhdXAAUhcFDNKr1ALBAqbzmz-pIFZCSqirMTItP0cwgGLVt4yqniAF889vD4_jMtDo0F02a17w2Oea-k4vfY8RQxBcSf12tFBHzJBUHKE71mkdO03OwPVT-gTuxk1qHOUeGKhpoCqVkUzKGY/s1080/spooky-tree-against-big-moon_1048-2912.jpg" class="sun1"> 
+   <br> 
+   <div class="p2"> <p2>
+      This is moon (our chandamama). This is only one natural sattellite of our earth and distance between earth and moon is 384400 KM. And moon is responsibale for heigh tids in oceans. 
+    </p2> 
+   </div> 
+   <br> <button class="translate2">Hindi</button> <button class="translate2E">English</button> 
+  </div> <!-- Review box --> 
+  <div class="alert3"> 
+   <div class="p1"> <p1>
+      Review 
+    </p1> <button class="closebtn3"><li class="fas fa-close"></li></button> 
+   </div> 
+   <br> 
+   <div class="p2"> <p2>
+      If you like my project then give me a review with your name and email i'd by clicking the button blow. 
+    </p2> 
+   </div> 
+   <br> <button class="rvu">Give me a review</button> 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">const earth = document.querySelector(".earth");
+const all = document.querySelector(".alert");
+const clbt = document.querySelector(".closebtn");
+const moon = document.querySelector(".moon")
+const all2 = document.querySelector(".alert2")
+const btm =  document.querySelector(".closebtn2")
+let   hdh = document.querySelector(".hdh")
+let   hdh1 = document.querySelector(".hdh1")
+let   pth = document.querySelector(".pth")
+let   pth1 = document.querySelector(".pth1")
+const bth = document.querySelector(".translate")
+const bth1 = document.querySelector(".translateE")
+const bth2 = document.querySelector(".translate2")
+const bth3 = document.querySelector(".translate2E")
+const prop = document.querySelector(".alert3")
+const clbtn3 = document.querySelector(".closebtn3")
+const rvu = document.querySelector(".rvu")
+
+
+earth.addEventListener("mouseover", function(){
+  all.style.display = "block";
+  earth.style.animation = "none";
+});
+
+clbt.addEventListener("click", function(){
+  all.style.display = "none";
+  earth.style.animation = "";
+});
+
+moon.addEventListener("mouseover", function(){
+  all2.style.display = "block";
+  moon.style.animation = "none";
+});
+
+btm.addEventListener("click", function(){
+  all2.style.display = "none";
+  moon.style.animation = "";
+})
+
+bth.addEventListener("click", function(){
+  hdh.innerHTML = "हमारा ग्रह पृथ्वी";
+  pth.innerHTML = "यह हमारा घरेलू ग्रह है जिसका नाम पृथ्वी है। यह सौर मंडल का एकमात्र ग्रह है जिस पर जीवन है। यह ग्रह 8 अरब मनुष्यों और 100 अरब जानवरों का घर है। पृथ्वी सूर्य और उसकी धुरी के चारों ओर घूमती है जैसा कि आप इस एनीमेशन में कर सकते हैं।";
+  bth.style.display = "none";
+  bth1.style.display = "block";
+})
+
+bth1.addEventListener("click", function(){
+   hdh.innerHTML = "The Planet Earth";
+   pth.innerHTML= "This is our home planet named earth.IT is only planet in solar system which has life. This planet is home of 8 Billion humans and 100 billions of animals. Earth rotats around sun and it's axis as you can in this animation.";
+   bth1.style.display = "none";
+  bth.style.display = "block";
+})
+
+
+bth2.addEventListener("click", function(){
+  hdh1.innerHTML = "चंद्रमा";
+  pth1.innerHTML = "यह चंद्रमा (हमारा चंदामामा) है।  यह हमारी पृथ्वी का एकमात्र प्राकृतिक उपग्रह है तथा पृथ्वी से चंद्रमा के बीच की दूरी 384400 किलोमीटर है।  और चंद्रमा महासागरों में ऊंचाई वाले ज्वार के लिए जिम्मेदार है।";
+  bth2.style.display = "none";
+  bth3.style.display = "block";
+})
+
+bth3.addEventListener("click", function(){
+   hdh1.innerHTML = "The Moon";
+   pth1.innerHTML= "This is moon (our chandamama). This is only one natural sattellite of our earth and distance between earth and moon is 384400 KM. And moon is responsibale for heigh tids in oceans.";
+   bth3.style.display = "none";
+  bth2.style.display = "block";
+})
+
+
+function review(){
+  prop.style.display ="block";
+}
+
+setTimeout(review, 6000);
+
+clbtn3.addEventListener("click", function(){
+ prop.style.display = "none"; 
+})
+
+rvu.addEventListener("click", function(){
+  window.location = 'https://bhuvnesh-raghav.github.io/contact-me';
+})</script></body></html>
