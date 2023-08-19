@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&amp;display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/abca6c4aae.js" crossorigin="anonymous"></script> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Free keto recipes</title> 
+  <style>
+ 
+</style> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: 'Edu SA Beginner', cursive;
+  }
+
+  .ebook-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .ebook-title {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+
+  .ebook-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+ .aut{padding: 2px;}
+ .aut h3 {color: red;}
+ .aut h2 {font-size: 2rem;}
+
+  .ebook-description {
+    text-align: left;
+    font-size: 2.2rem;
+    color: black;
+    line-height : 40px;
+    margin-bottom: 20px;
+  }
+
+  .get-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ transition : all ease 1s;
+  }
+
+  .get-now-button:hover {
+    transition : all ease 1s;
+    color: black;
+    border : 2px solid black;
+    background-color: white;
+  }
+  
+ 
+  
+  
+ 
+
+.bd{
+ display:none;
+position : absolute;
+top :40vh;
+right: 100px;
+  height: 100vh;
+width : 100vw;
+ }
+
+.bgn{
+
+margin-left: 15vw;
+width : 60vw;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 4px 6px 12px #999999;
+background-color: white;
+
+background-image : url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn6jJ-32WoRqeSouR-v1qb4ju6V44f6KWCodKnjUay9QsPwsKe-FEUjbGxdYw5WDKUZSlLuj7i5sBJKdOV772vla0UHx2aHO9wHDJ209GqV8CqhHSQxuJeEoFodpllbYb5mG3np0hTgkTOqFGCRvhwjjWR3iptCEcMweXONKRNXrlPYHLOE2JdcmJNfxuQ/s912/premium_photo-1682310473661-7a334b46e164.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+
+  
+}
+
+.closebtn{
+  float:right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all ease 1s;
+}
+
+.closebtn:hover{color : red;
+ transition: all ease 1s;}
+
+.bgn h1{margin: 10px;
+font-size : 1.9rem;}
+.bgn p{margin: 10px;
+font-size : 1.4rem;
+}
+
+#name{
+margin : 10px;
+font-size: 2rem;
+border-radius : 5px;
+padding : 5px;
+border : 2px solid black;
+width : 58.5vw;
+transition: all ease 1s;
+background: transparent;}
+
+#name:hover {background : white;
+transition: all ease 1s; }
+  
+
+#email {margin : 10px;
+font-size: 2rem;
+border-radius : 5px;
+padding : 5px;
+border : 2px solid black;
+width : 58.5vw;
+transition: all ease 1s;
+background: transparent;}
+
+#email:hover {background : white;
+transition: all ease 1s; }
+
+.sub{margin : 10px;
+font-size: 2rem;
+padding: 5px;
+border : 2px solid black;
+border-radius: 5px;
+width : 60vw;
+cursor: pointer;
+transition: all ease 1s;
+background: transparent;}
+
+.sub:hover {background : white;
+transition: all ease 1s; 
+font-weight: bold;
+font-size: 2.4rem;}
+
+
+.alert {
+  position: absolute;
+  top: 25vh;
+  left: 30vw;
+  background-color: black;
+ color: white;
+ margin: 6px;
+ border-radius: 10px;
+ height: auto;
+ width : 45vw;
+ justify-content: center;
+ border : 1px solid white;
+ display : none;
+}
+ 
+
+ 
+.alert p1{
+  font-weight: bold;
+  font-size : 1.5rem;
+  color: black;
+  width : 45vw; 
+   background-color: white; 
+}
+
+
+.p1{ 
+  border-radius : 10px;
+  padding : 10px;
+  font-weight: bold;
+  font-size : 1.6rem;
+  background-color: white;
+  width : 43vw;
+  border-bottom: none; 
+  border-bottom-left-radius: 0px; 
+  border-bottom-right-radius: 0px; 
+}
+
+.alert p2{
+  text-align: left;
+  font-size : 1.5rem;
+}
+
+
+.p2{
+  padding: 10px;
+  border-top: 1px solid white;
+}
+
+
+.closebtn2{
+  float:right;
+  background: none;
+  color: red;
+ color: none;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.closebtn li{background: none;
+size: 2rem;}
+
+
+@media (max-width: 600px) {
+    .bd {
+      top : 140vh;
+      max-width: 70%;
+    }
+#email {width:50vw;
+font-size:1rem;}  
+
+.alert {
+  position: absolute;
+  top: 25vh;
+  left: 140vw;}
+
+#name{width:50vw;
+font-size:1rem;}  
+.sub{width : 40vw;   
+ font-size: 1rem; }
+ 
+ .sub:hover {font-size: 1.2rem;}
+ 
+ .alert { position: absolute;
+  top: 15vh;
+  left: 20vw;
+  background-color: black;
+ color: white;
+ margin: 6px;
+ border-radius: 10px;
+ height: 53vh;
+ width : 70vw;
+ justify-content: center;
+ border : 1px solid white;;
+ }
+ 
+ .p1{ 
+  border-radius : 10px;
+  padding : 10px;
+  font-weight: bold;
+  font-size : 1rem;
+  background-color: white;
+  width : 64vw;
+  border-bottom: none; 
+  border-bottom-left-radius: 0px; 
+  border-bottom-right-radius: 0px; 
+}
+ 
+.alert p2{
+  font-weight: bold;
+  font-size : 20px;
+  color: white;
+   background-color: black; 
+   text-align: left;
+}
+
+
+.p2{
+  padding: 5px;
+  border-top: 1px solid white;
+}
+
+ 
+ }
+ 
+  @media (max-width: 600px) {
+    .ebook-container {
+      max-width: 75%;
+    }
+ .ebook-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .ebook-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+ .aut{padding: 2px;}
+ .aut h3 {color: red;}
+ .aut h2 {font-size: 1.5rem;}
+
+  .ebook-description {
+    text-align: left;
+    font-size: 1.5rem;
+    color: black;
+    line-height : 30px;
+    margin-bottom: 20px;
+  }
+
+  .get-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ transition : all ease 1s;
+  }
+
+  .get-now-button:hover {
+    transition : all ease 1s;
+    color: black;
+    border : 2px solid black;
+    background-color: white;
+  }
+  
+ 
+  }</style></head> 
+ <body> 
+  <div class="ebook-container"> 
+   <h1 class="ebook-title">Free keto recipes</h1> 
+   <img class="ebook-image" src="https://bhuvnesh-raghav.github.io/poster.png" alt="Ebook Cover"> 
+   <div class="aut"> 
+    <h3>Author :</h3> 
+    <h2>Bhuvnesh Raghav</h2> 
+   </div> 
+   <p>Price : $0.0</p> 
+   <p class="ebook-description">Embark on a journey to wellness and culinary delight with our comprehensive eBook, "Deliciously Keto: Your Guide to Flavorful Free Keto Diet Recipes." Unleash the power of the ketogenic lifestyle with a collection of delectable recipes that not only adhere to your dietary goals but also tantalize your taste buds. click on button and get now a best keto recipes for free and lose several IBs in just a week "its completely free pf cost" </p> <button class="get-now-button">Get Now</button> 
+  </div> <!-- form --> 
+  <div class="bd"> 
+   <div class="bgn"> <button class="closebtn"><li class="fas fa-close"></li></button> 
+    <h1>Download now</h1> 
+    <p>Enter your name and email and download your free ebook now.</p> 
+    <form name="submit-to-google-sheet" id="contact-form"> 
+     <input type="name" name="name" id="name" placeholder="Enter your full name" required type="text"> 
+     <input type="email" id="email" name="email" placeholder="example@gmail.com" required type="email"> 
+     <br> <button class="sub">Download</button> 
+    </form> 
+   </div> 
+  </div> <!-- atert --> 
+  <div class="alert"> 
+   <div class="p1"> <p1>
+      Thankyou 
+    </p1> <button class="closebtn2"><li class="fas fa-close"></li></button> 
+   </div> 
+   <br> 
+   <div class="p2"> <p2>
+      ThankYou for download my free ebook this ebook is result of hard work of moths and research. Now your ebook is download successfully you can now read the ebook in downloads files on your divice. 
+    </p2> 
+   </div> 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">const btnp = document.querySelector(".get-now-button")
+const imcont = document.querySelector(".bd")
+const btnp2 = document.querySelector(".closebtn")
+const alrt = document.querySelector(".alert")
+const clbt = document.querySelector(".closebtn2")
+
+
+clbt.addEventListener("click", function(){
+  alrt.style.display = "none";
+})
+
+btnp.addEventListener("click", function() {
+  imcont.style.display = "block";
+  imcont.style.transition = "all ease 1s"
+});
+
+
+btnp2.addEventListener("click", function() {
+  imcont.style.display = "none"
+});
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycby9k4wfZH2szdBgUtxpbx8zstJja9l0vOouUpvTsUPcAs8sx_-v6VGX-Oy64v67MRIglA/exec'
+  const form = document.forms['submit-to-google-sheet']
+const sus = document.getElementById('ss');
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         sus.innerHTML="";
+  setTimeout(function()
+  {
+    sus.innerHTML="";
+  },1000)
+  form.reset();
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+  
+  const playSound = () => {
+  const audio = new Audio("tap.mp3");
+  audio.play();
+};
+
+document.querySelector(".sub").addEventListener("click", playSound);
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  // code to handle form submission
+  window.location.href = 'Ketogenic-lifestyle-recipes.pdf'; // replace with your own URL
+alrt.style.display = "block";
+ });</script></body></html>
