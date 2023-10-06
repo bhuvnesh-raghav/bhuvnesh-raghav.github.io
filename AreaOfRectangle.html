@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="discription" content ="Find out the Area of any rectangle with formula."
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <title>How to find area of rectangle formula</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="box">
+  <h1>How to find area of rectangle formula</h1>
+<input type="number" id="lanth" class="vlu" placeholder="Enter length">
+<br>
+<input type="number" id="width" class="vlu" placeholder="Enter breadth">
+<br>
+<select value="Select unit" id="unit">
+  <option value="select unit">Select unit</option>
+  <option value="cm">cm</option>
+  <option value="Meter">Meter</option>
+  <option value="KM">KM</option>
+</select>
+<br>
+<button id="fia">Find area</button>
+<br>
+<p id="result">Area is</p>
+<br>
+
+
+</div>
+<div class="disc">
+  <h2>Discription</h2>
+  <p id="peraSF">
+    This tool is manage and developed by Bhuvnesh Raghav.
+    This tool is developed for finding the area of rectangle as every knows that we have a formula for getting area of rectangle is <span>height × breadth </span>. And this tool can get upto 99% correct answer. as a developer in want to tell you that please don't use this tool for your school home work or in your exam. if your are using this tool it means that you are not making enough efforts to learn maths. this tool is mainly created for real life application for find area of land table or in engineering projects.
+    <h2>How to use this tool.</h2>
+    <div id="ST">
+      <div>1. First fill the value of length</div>
+      <div>2. Then fill the value of breadth</div>
+      <div>3. Select the value of unit</div>
+      <div>4. Click on button</div>
+      <div>5. And get Area</div>
+    </div>
+  </p>
+</div>
+<footer>
+        <p>&copy; 2023 Bhuvnesh Raghav</p>
+    </footer>
+</body>
+<script>
+  let Xh = document.querySelector("#lanth");
+  let Yw = document.querySelector("#width");
+  let fia = document.querySelector("#fia");
+  let result = document.querySelector("#result");
+  let rect = document.querySelector("#rect"); 
+  
+ let unit = document.querySelector("#unit");
+ 
+ let upl = document.querySelector(".upl");
+ let dpl = document.querySelector(".dpl");
+  
+  fia.addEventListener("click", function(){
+    let res = Xh.value * Yw.value;
+    result.innerHTML = "Area =  " + res + unit.value;
+    upl.innerHTML = Xh.value + unit.value;
+    dpl.innerHTML = Yw.value + unit.value;
+    upl.style.display = "block";
+    dpl.style.display = "block";
+    
+  })
+  
+  
+  
+ 
+</script>
+</html>
