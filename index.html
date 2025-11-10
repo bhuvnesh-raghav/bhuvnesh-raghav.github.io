@@ -1,398 +1,858 @@
-<!doctype html>
-<html lang="hi"> 
- <head> 
-  <meta charset="UTF-8"> 
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&amp;display=swap" rel="stylesheet"> <!-- imp links --> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <script src="https://kit.fontawesome.com/abca6c4aae.js" crossorigin="anonymous"></script> 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
- <style type="text/css" id="dcoder_stylesheet">*{padding: 0;
-margin : 0;
-font-family: 'Edu SA Beginner', cursive;
-}
-
-a{
-  text-decoration: none;
-  }
-
-
-
-.footer {
-    background-color: black;
-    color: White;
-    text-align: center;
-    padding: 20px;
-    position: absolut;
-    width: 100%;
-  }
-
-  @media (max-width: 600px) {
-    .footer {
-      position: absolute;
-    }
-  } 
-      
-  .Latestposts{
-    background: black;
-    color:white;
-    margin-top: 29px ;
-    padding : 9px;
-    text-align: center;
-  }
-  
-  .lp1 {font-size: 5rem;
-  letter-spacing : 9px;
-  white-space : nowrap;
-  width: 100%;
-   overflow: hidden ;
-  animation: updown 1s linear infinite; 
-}
-
-@media(max-width: 858px) {
-  .lp1 {
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: red;
-  }
-}
-
-@keyframes updown
-  {
-    0%{ transform : translateY(2px);
-      
-    }
-    50%{ transform : translateY(-2px);
-      
-    }
-    100%{ transform : translateY(2px);
-      
-    }
-  }
-  
- //post cards  
-  
-  .cdd{
-    border: 2px solid  black;
-    height: 5vh;
-    background-color: red;
-  
-  }
-  
-  .imm{
-    border: 1px solid  black;
-     margin-bottom: 0px;
-     display: flex;
-  align-items: center;
-  padding: 8px;
-  text-align: center;
-  margin-top : 30px;
-    border-radius: 10px;
-   margin-left: 30px;
-   margin-right: 30px;
- height:   20vh;
- width: 94%;
-  }
-  
- @media(max-width: 858px) {
-  .imm{
-   width:81%;
-  }
-.cmm{width: 280px;}
-}
-  
-
-.ccm{
-  border: 1px solid  black; 
-  margin-top: 0px;
-  margin : 0px;
-   padding : 10px;
-    border-radius: 10px;
-    border-top: none;
-     margin-left: 30px;
-    margin-right: 30px;
-}
-
-.btn2{
-  margin: 20px;
-   margin-left: 30px;
-  padding: 5px;
-  padding-left: 20px;
-    padding-right: 20px;
-    font-size: 2rem;
-    background-color: blue;
-    border: 1px solid black;
-    color: white;
-    border-radius: 8px;
-    animation: updown 1s linear infinite;
-   cursor: pointer;
-    }
-
-.hd{
- font-weight:bold;
-  margin: 15px;
-  font-size: 2rem;
-}
-
-.pd{
-  margin: 15px;
-  font-size: 1.3rem;
-}
-
-.btn2:hover{
-  background-color: green;
-  box-shadow: 1px 2px 10px 12px green;
-  font-size: 2.3rem;
-}
-  
-@media(max-width: 858px) {
-  .btn2 {
-    font-size: 20px;
-    letter-spacing: 1px;
-   border-radius : 5px;
-  }
-.btn2:hover{
-  background-color: #333333;
-  box-shadow: 1px 2px 10px 12px #333333;
-  font-size: 25px;
-}
- .hd {font-size : 30px;}
- .pd {font-size : 25px;} 
-  
-}
-  
-
-
-// about me 
-.ac{
-  text-decoration: none;}
-
- 
-
-.about-me {
-  display: flex;
-  margin-top : 30px;
-  flex-wrap: wrap;
-  line-height: 1.6;
-  margin-bottom : 20px;
- border-top: 5px solid black;
- border-bottom: 5px solid black;
-  padding : 20px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuvnesh Raghav - Portfolio</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --sun: #FDB813;
+            --earth: #1e88e5;
+            --accent: #00ff88;
+            --text: #ffffff;
+            --muted: #94a3b8;
         }
-        .about-me img {
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        #space-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin-right: 20px;
+            height: 100%;
+            z-index: 1;
         }
-        .about-me-content {
-            flex: 1;
+
+        #content-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 2;
+            pointer-events: none;
         }
-        .about-me h1 {
-            font-size: 23px;
-            margin: 10;
+
+        section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            
+            /* <-- Default to hidden */
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), 
+                        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            pointer-events: none;
         }
-        .about-me h2 {
-            font-size: 15px;
-            margin: 10px 0;
+
+        section.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
         }
-        .about-me p {
-            margin: 10px 0;
+
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
-        @media (max-width: 600px) {
-            .about-me {
-                flex-direction: column;
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+            text-shadow: 0 0 80px rgba(0, 255, 136, 0.5);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        p {
+            font-size: clamp(1.1rem, 2.1vw, 1.4rem);
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .subtitle {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            margin: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), #00d4ff);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.4);
+            border: none;
+            cursor: pointer;
+            pointer-events: all;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 60px rgba(0, 255, 136, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+        }
+
+        /* Horizontal scroll container */
+        .horizontal-scroll {
+            margin-top: 2rem;
+            overflow: hidden;
+            pointer-events: all !important;
+            padding: 1rem 0;
+            position: relative;
+           
+        }
+
+        .scroll-content {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Horizontal dots navigation */
+        .horizontal-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            pointer-events: all;
+        }
+
+        .horizontal-dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .horizontal-dot.active {
+            background: var(--accent);
+            box-shadow: 0 0 15px var(--accent);
+            transform: scale(1.3);
+        }
+
+        .horizontal-dot:hover {
+            background: rgba(0, 255, 136, 0.6);
+        }
+
+        .glass-card {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            min-width: 320px;
+            flex-shrink: 0;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+            border-color: var(--accent);
+        }
+
+        .service-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .price {
+            color: var(--sun);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .work-item {
+            position: relative;
+            height: 280px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.1));
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            min-width: 350px;
+            flex-shrink: 0;
+        }
+
+        .review-card {
+            background: rgba(21, 21, 21, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2.5rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            min-width: 450px;
+            flex-shrink: 0;
+        }
+
+        .stars {
+            color: var(--sun);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer {
+            margin-top: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .company {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1.2rem;
+            margin: 0.5rem 0;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            border-radius: 15px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1.1rem;
+            pointer-events: all;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            pointer-events: all;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 1rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .nav-dot.active {
+            background: var(--accent);
+            box-shadow: 0 0 20px var(--accent);
+            transform: scale(1.5);
+        }
+
+        .nav-dot:hover {
+            background: rgba(0, 255, 136, 0.6);
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: var(--accent);
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+
+
+        .images{
+            border-radius: 10px;
+            box-shadow: 2px 3px 8px #000;
+            width: 15vw;
+            margin: 15px;
+        }
+       
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(-10px); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
             }
-            .about-me img {
-                max-width: 100%;
-                margin-right: 0;
-            }
         }
 
+        @media (max-width: 768px) {
+            .nav-dots {
+                right: 1rem;
+            }
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            .glass-card {
+                min-width: 280px;
+            }
+            .work-item {
+                min-width: 300px;
+            }
+            .review-card {
+                min-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="space-canvas"></canvas>
 
+    <div class="nav-dots" id="nav-dots"></div>
+    <div class="scroll-indicator" id="scroll-indicator">Scroll or use arrow keys ↓</div>
 
-/*social link */
+    <div id="content-container">
+        <section id="hero" class="active">
+            <div class="content">
+                <h1>BHUVNESH RAGHAV</h1>
+                <p class="subtitle">Full-Stack Web Developer — UI, Performance & Motion</p>
+                <p>Creating stunning, performant web experiences that push boundaries</p>
+                <div>
+                    <a href="#" class="btn" onclick="goToSection(5); return false;">Hire Me</a>
+                    <a href="#" class="btn btn-secondary" onclick="goToSection(3); return false;">See Work</a>
+                </div>
+            </div>
+        </section>
 
-  
-.SIC {
-margin-top: 15px;
-border-top: 5px solid black;
-border-bottom: 5px solid black;
-display: flex;
-justify-content: center;
-padding: 20px;}
+        <section id="about">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I build performant, accessible, and animated web experiences. I specialize in modern JS, Canvas animations, and responsive design. I love designing interfaces that feel both futuristic and human.</p>
+                <p>With expertise in React, Vue, WebGL, and cutting-edge animation techniques, I transform ideas into immersive digital experiences that users remember.</p>
+            </div>
+        </section>
 
-.ab{
-  text-decoration: none;
-color: black;}
+        <section id="services">
+            <div class="content">
+                <h2>Services & Pricing</h2>
+                <div class="horizontal-scroll">
+                    <div class="scroll-content" id="services-content">
+                        <div class="glass-card service-card">
+                            <h3>🎨 UI / UX Design</h3>
+                            <p>Design modern responsive interfaces with motion systems and user-centered experiences.</p>
+                            <div class="price">₹15,000 — ₹35,000</div>
+                        </div>
+                        <div class="glass-card service-card">
+                            <h3>⚡ Frontend Development</h3>
+                            <p>React/Vue, micro-interactions, canvas/WebGL animations where needed.</p>
+                            <div class="price">₹25,000 — ₹70,000</div>
+                        </div>
+                        <div class="glass-card service-card">
+                            <h3>🚀 Full-Stack Projects</h3>
+                            <p>End-to-end product development, deployment, and maintenance.</p>
+                            <div class="price">Starting ₹60,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="horizontal-dots" id="services-dots"></div>
+            </div>
+        </section>
 
-.wpr .butn1{
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  float: left;
-  overflow: hidden;
-  margin: 0 5px;
-  background: #fff;
-  border-radius: 50px;
-  border: 1px solid black;
-  cursor: pointer;
-  transition : all 0.3s ease-out;
+        <section id="work">
+            <div class="content">
+                <h2>Past Work</h2>
+                <div class="horizontal-scroll">
+                    <div class="scroll-content" id="work-content">
+                        <div class="glass-card work-item">
+                            <div style="padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="color: var(--accent); font-size: 1.6rem;">ed-tech Platform</h3>
+                                <img class="images" src="/phishnix.png" alt="">
+                                <p>Full-stack solution with with Ai intigration</p>
+                            </div>
+                        </div>
+                        <div class="glass-card work-item">
+                            <div style="padding: 2rem; height: 110%; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="color: var(--accent); font-size: 1.6rem;">Interactive Dashboard</h3>
+                                <img class="images" src="/dashboard.png" alt="">
+                                <p>Data visualization with WebGL animations and real-time updates</p>
+                            </div>
+                        </div>
+                        <div class="glass-card work-item">
+                            <div style="padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="color: var(--accent); font-size: 1.6rem;">Marketing Website</h3>
+                                <img class="images" src="/veloklean.png" alt="">
+                                <p>High-conversion landing pages with stunning animations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="horizontal-dots" id="work-dots"></div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="content">
+                <h2>Client Reviews</h2>
+                <div class="horizontal-scroll">
+                    <div class="scroll-content" id="reviews-container"></div>
+                </div>
+                <div class="horizontal-dots" id="reviews-dots"></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="content">
+                <h2>Let's Work Together</h2>
+                <p>Ready to create something amazing? Get in touch!</p>
+               
+
+                <a 
+                    href="https://wa.me/+917310790490?text=Hello%20Bhuvnesh,%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project." 
+                    target="_blank"
+                    class="btn"
+id="contact-form"
+                    style="pointer-events: all; margin-top: 1rem;"
+                >
+                    Start a WhatsApp Chat 💬
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const CLIENT_REVIEWS = [
+            {id: 1, name: "Asha Verma", company: "FreshBake", rating: 5, text: "Transformed our website into a conversion machine. Stunning visuals and fast load times."},
+            {id: 2, name: "Ravi Gupta", company: "PlumbRight", rating: 5, text: "Great communication and delivered ahead of schedule. The animations look futuristic and clean."},
+            {id: 3, name: "Neha Singh", company: "GreenCart", rating: 4, text: "Excellent work. Small fixes required, but overall very professional."}
+        ];
+
+        // Render reviews
+        const reviewsContainer = document.getElementById('reviews-container');
+        CLIENT_REVIEWS.forEach(review => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+                <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+                <p style="font-size: 1.2rem;">"${review.text}"</p>
+                <div class="reviewer">${review.name}</div>
+                <div class="company">${review.company}</div>
+            `;
+            reviewsContainer.appendChild(card);
+        });
+
+        // Contact form
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Form submitted!');
+            alert('Thank you! I will get back to you soon.');
+            e.target.reset();
+        });
+
+        // Horizontal scroll navigation with dots
+        function setupHorizontalScroll(contentId, dotsId) {
+            const content = document.getElementById(contentId);
+            const dotsContainer = document.getElementById(dotsId);
+            const cards = content.children;
+            const totalCards = cards.length;
+            let currentIndex = 0;
+
+            // Create dots
+            for (let i = 0; i < totalCards; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'horizontal-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => scrollToCard(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            function scrollToCard(index) {
+                if (index < 0 || index >= totalCards) return;
+                currentIndex = index;
+                
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 32; // 2rem gap
+                const offset = -(cardWidth + gap) * index;
+                
+                content.style.transform = `translateX(${offset}px)`;
+                
+                // Update dots
+                dotsContainer.querySelectorAll('.horizontal-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+            // Touch/swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            content.parentElement.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+            
+            content.parentElement.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].clientX;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0 && currentIndex < totalCards - 1) {
+                        scrollToCard(currentIndex + 1);
+                    } else if (diff < 0 && currentIndex > 0) {
+                        scrollToCard(currentIndex - 1);
+                    }
+                }
+            }, { passive: true });
+
+            // Mouse drag support
+            let isDragging = false;
+            let startX = 0;
+            let startTransform = 0;
+
+            content.parentElement.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+               // With this:
+const computedStyle = window.getComputedStyle(content);
+const matrix = computedStyle.getPropertyValue('transform');
+// matrix is usually 'none' or 'matrix(a, b, c, d, tx, ty)'
+if (matrix && matrix !== 'none') {
+    // Extract the translateX value (the 5th component in a 2D matrix)
+    const values = matrix.match(/matrix\((.+?)\)/)[1].split(', ');
+    startTransform = parseFloat(values[4]);
+} else {
+    startTransform = 0;
 }
+content.style.transition = 'none';
+            });
 
-.wpr .butn1:hover{
-  width: 200px;
-}
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const diff = e.clientX - startX;
+                content.style.transform = `translateX(${startTransform + diff}px)`;
+            });
 
+            document.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                content.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
+                
+                // Snap to nearest card
+                const transform = content.style.transform;
+                const currentOffset = transform ? parseFloat(transform.match(/-?\d+/)[0]) : 0;
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 32;
+                const index = Math.round(-currentOffset / (cardWidth + gap));
+                scrollToCard(Math.max(0, Math.min(totalCards - 1, index)));
+            });
 
-.wpr .butn1 .icon{
-   display: inline-block;
-  height: 60px;
-  width: 60px;
-  text-align: center;
-  align-items: center;
-  border-radius: 50px;
-  box-sizing: border-box;
-  line-height: 60px;
-  transition : all 0.3s ease-out;
-  }
+            // Arrow key navigation when focused
+            content.parentElement.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    e.stopPropagation();
+                    scrollToCard(currentIndex - 1);
+                } else if (e.key === 'ArrowRight' && currentIndex < totalCards - 1) {
+                    e.stopPropagation();
+                    scrollToCard(currentIndex + 1);
+                }
+            });
+        }
 
-.wpr .butn1:nth-child(1):hover .icon{
-  background: #1DA1F2;
-}
-.wpr .butn1:nth-child(2):hover .icon{
-  background: #E1306C;
-}
-.wpr .butn1:nth-child(3):hover .icon{
-  background: #333;
-}
-.wpr .butn1:nth-child(4):hover .icon{
-  background: #FF0000;
-}
+        // Initialize horizontal scrolls
+        setupHorizontalScroll('services-content', 'services-dots');
+        setupHorizontalScroll('work-content', 'work-dots');
+        setupHorizontalScroll('reviews-container', 'reviews-dots');
 
-.wpr .butn1:nth-child(1):hover span{
-  color: #1DA1F2;
-}
-.wpr .butn1:nth-child(2):hover span{
-  color: #E1306C;
-}
-.wpr .butn1:nth-child(3):hover span{
-  color: #333;
-}
-.wpr .butn1:nth-child(4):hover span{
-  color: #FF0000;
-}
+        // 2D Canvas Solar System Animation
+        const canvas = document.getElementById('space-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
 
-.wpr .butn1:hover .icon li{
-  color: #fff;
-}
+        // Starfield
+        const stars = [];
+        for (let i = 0; i < 300; i++) {
+            stars.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 1.5,
+                opacity: Math.random()
+            });
+        }
 
-.wpr .butn1 .icon li {
-  font-size: 25px;
-  line-height: 60px;
-  transition : all 0.3s ease-out;
-}
+        // Planets data
+        const planets = [
+            { name: 'Mercury', distance: 150, size: 4, color: '#8C7853', speed: 0.04, angle: 0 },
+            { name: 'Venus', distance: 200, size: 9, color: '#FFC649', speed: 0.03, angle: Math.PI / 3 },
+            { name: 'Earth', distance: 260, size: 10, color: '#4A90E2', speed: 0.02, angle: Math.PI },
+            { name: 'Mars', distance: 320, size: 6, color: '#E27B58', speed: 0.018, angle: Math.PI * 1.5 },
+            { name: 'Jupiter', distance: 420, size: 25, color: '#C88B3A', speed: 0.01, angle: Math.PI / 6 },
+            { name: 'Saturn', distance: 520, size: 22, color: '#FAD5A5', speed: 0.008, angle: Math.PI * 0.8 }
+        ];
 
-.wpr .butn1 span {
-  font-size : 20px;
-  font-weight: 500; 
-  line-height: 60px;
-  margin-left: 10px;
-  transition : all 0.3s ease-out;
-}
+        let animationProgress = 0;
+        const targetProgress = 0;
 
-@media only screen and (max-width: 600px) {
-  .wpr .butn1 {
-   float: none;
-    display : flex;
-    fiex-direction: column;
-    margin: 20px auto;
-  }
-  
-  
- //</style></head> 
- <body> <!-- Navbar --> 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
-   <div class="container-fluid"> <a class="navbar-brand" href="#">Bhuvnesh Raghav</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
-     <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
-      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a> </li> 
-      <li class="nav-item"> <a class="nav-link" href="#about">About me</a> </li> 
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Others pages </a> 
-       <ul class="dropdown-menu"> 
-        <li><a class="dropdown-item" href="contact-me">contact us</a></li> 
-        <li><a class="dropdown-item" href="#">catigories</a></li> 
-        <li> 
-         <hr class="dropdown-divider"></li> 
-        <li><a class="dropdown-item" href="#">Terms and conditions</a></li> 
-       </ul> </li> 
-      <li class="nav-item"> <!--   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        --></li> 
-     </ul> 
-     <form class="d-flex" role="search"> 
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success" type="submit">Search</button> 
-     </form> 
-    </div> 
-   </div> 
-  </nav> <!-- LATEST POSTS --> 
-  <div class="Latestposts"> 
-   <h1 class="lp1">Latest post</h1> 
-  </div> <!-- post cards --> 
-  <div class="cdd"> 
-   <img src="space.png" class="imm" alt="ancient-indian-science.knowladeg.png"> 
-   <div class="ccm"> 
-    <h2 class="hd"> Animation of solar system. Learn about solar system </h2> 
-    <p class="pd"> This is animation of our solar system and you can know about moon and earth this site is animation best for childern to know about earth and moon. And you can  read information in english and hindi as well as.  </p> <a href="solarsystem.html"> <button class="btn2">Read now</button> </a>
-   </div> 
-   <!--Area of rectangle -->
-   <div class="cdd"> 
-   <img src="AreaOfRect.jpg" class="imm" alt="How to find area of rectangle formula"> 
-   <div class="ccm"> 
-    <h2 class="hd">How to find area of rectangle formula?</h2> 
-    <p class="pd">This tool is manage and developed by Bhuvnesh Raghav. This tool is developed for finding the area of rectangle</p> <a href="AreaOfRectangle.html"><button class="btn2">Read now</button> </a> 
-   </div>
-  </div> <!-- second post card --> 
-  <div id="about"> 
-   <div class="about-me"> 
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSmUjGI47IL6L-XDmp6hImU25_6wldERfFpI-2shYrvFUlrljghpa0WUWjwoIFyISl2VDzh9r4q9-fN6tdd_4ExEsObsedwC8WMu6xJQwcEbM-Z8_QcLCLEOCbTHBagXwJnNSETf2PLUf4dQRI5khj_ruUp-8XnKSTEbOTdB1MhKyY7GbiaAXn6dDDse8s/s720/IMG_20230603_200302_420.jpg" alt="Bhuvnesh Raghav"> 
-    <div class="about-me-content"> 
-     <h1>This is Bhuvnesh Raghav</h1> 
-     <h2>I'm a <a class="ac" href=".contect-us"> web developer</a> and science &amp; social analyst</h2> 
-     <p> Hi there! I'm a web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and various front-end frameworks. </p> 
-     <p> I love working on challenging projects and turning ideas into reality. When I'm not coding, you can find me exploring the great outdoors or reading a good book. </p> 
-     <p>If you want to create any kind of website then <a class="ac" href=".contect-us">contact me here </a></p> 
-     <p>if you are thinking that why i study and analysis science and social devlopment. It's because i live in the society so this is the reason thats why i write about science and society </p> 
-    </div> 
-   </div> 
-  </div> <!-- social icons --> 
-  <div class="SIC"> 
-   <div class="wpr"> 
-    <div class="butn1"> <a class="ab" href="https://twitter.com/bhuvneshraghav0?t=tT1OF5tLiiEhFlsLgl0arw&amp;s=09"> 
-      <div class="icon"> 
-       <li class="fab fa-twitter"></li> 
-      </div><span>Twitter</span></a> 
-    </div> 
-    <div class="butn1"> <a class="ab" href="https://youtube.com/@BhuvneshRaghav-1"> 
-      <div class="icon"> 
-       <li class="fab fa-youtube"></li> 
-      </div><span>Youtube</span> </a> 
-    </div> 
-    <div class="butn1"> <a class="ab" href="https://github.com/bhuvnesh6"> 
-      <div class="icon"> 
-       <li class="fab fa-github"></li> 
-      </div><span>Github</span> </a> 
-    </div> 
-    <div class="butn1"> <a class="ab" href="https://instagram.com/bhuvnesh_raghav006?igshid=MzRlODBiNWFlZA=="> 
-      <div class="icon"> 
-       <li class="fab fa-instagram"></li> 
-      </div><span>Instagram</span> </a> 
-    </div> 
-   </div> 
-  </div> 
-  <footer class="footer">
-    © 2023 Bhuvnesh Raghav. All rights reserved. 
-  </footer> 
- 
-</body></html>
+        function drawSun(centerX, centerY) {
+            // Sun glow
+            const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 40);
+            gradient.addColorStop(0, 'rgba(255, 220, 100, 0.8)');
+            gradient.addColorStop(0.5, 'rgba(255, 150, 50, 0.4)');
+            gradient.addColorStop(1, 'rgba(255, 100, 0, 0)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(centerX - 80, centerY - 80, 160, 160);
+
+            // Sun core
+            const sunGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 25);
+            sunGradient.addColorStop(0, '#FFF5E1');
+            sunGradient.addColorStop(0.4, '#FFD700');
+            sunGradient.addColorStop(0.8, '#FFA500');
+            sunGradient.addColorStop(1, '#FF6B00');
+            ctx.fillStyle = sunGradient;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 25, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawOrbit(centerX, centerY, radius) {
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        function drawPlanet(x, y, size, color) {
+            const gradient = ctx.createRadialGradient(x - size/3, y - size/3, 0, x, y, size);
+            gradient.addColorStop(0, color);
+            gradient.addColorStop(1, '#000000');
+            
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Highlight
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.beginPath();
+            ctx.arc(x - size/3, y - size/3, size/3, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawStars() {
+            stars.forEach(star => {
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function animate() {
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, width, height);
+
+            drawStars();
+
+            const centerX = width / 2;
+            const centerY = height / 2;
+
+            drawSun(centerX, centerY);
+
+            planets.forEach(planet => {
+                drawOrbit(centerX, centerY, planet.distance);
+                
+                planet.angle += planet.speed;
+                const x = centerX + Math.cos(planet.angle) * planet.distance;
+                const y = centerY + Math.sin(planet.angle) * planet.distance;
+                
+                drawPlanet(x, y, planet.size, planet.color);
+            });
+
+            // Twinkling stars
+            stars.forEach(star => {
+                star.opacity += (Math.random() - 0.5) * 0.05;
+                star.opacity = Math.max(0.3, Math.min(1, star.opacity));
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Section navigation
+        const sections = ['hero', 'about', 'services', 'work', 'reviews', 'contact'];
+        let currentSection = 0;
+        let isAnimating = false;
+
+        function goToSection(index) {
+            if (isAnimating || index === currentSection || index < 0 || index >= sections.length) return;
+            isAnimating = true;
+            
+            document.querySelector('section.active').classList.remove('active');
+            document.getElementById(sections[index]).classList.add('active');
+            
+            document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentSection = index;
+            
+            setTimeout(() => {
+                isAnimating = false;
+            }, 800);
+        }
+
+        const navDots = document.getElementById('nav-dots');
+        sections.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot' + (index === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goToSection(index));
+            navDots.appendChild(dot);
+        });
+
+        let scrollAccumulator = 0;
+        const scrollThreshold = 50;
+
+        window.addEventListener('wheel', (e) => {
+            if (isAnimating) return;
+            
+            scrollAccumulator += e.deltaY;
+            
+            if (Math.abs(scrollAccumulator) >= scrollThreshold) {
+                if (scrollAccumulator > 0 && currentSection < sections.length - 1) {
+                    goToSection(currentSection + 1);
+                } else if (scrollAccumulator < 0 && currentSection > 0) {
+                    goToSection(currentSection - 1);
+                }
+                scrollAccumulator = 0;
+            }
+        }, { passive: true });
+
+        let touchStartY = 0;
+        window.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            const touchEndY = e.changedTouches[0].clientY;
+            const diff = touchStartY - touchEndY;
+            
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && currentSection < sections.length - 1) {
+                    goToSection(currentSection + 1);
+                } else if (diff < 0 && currentSection > 0) {
+                    goToSection(currentSection - 1);
+                }
+            }
+        }, { passive: true });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                e.preventDefault();
+                if (currentSection < sections.length - 1) goToSection(currentSection + 1);
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                e.preventDefault();
+                if (currentSection > 0) goToSection(currentSection - 1);
+            }
+        });
+
+        let interacted = false;
+        function hideScrollIndicator() {
+            if (!interacted) {
+                document.getElementById('scroll-indicator').style.display = 'none';
+                interacted = true;
+            }
+        }
+        window.addEventListener('wheel', hideScrollIndicator, { once: true });
+        window.addEventListener('touchstart', hideScrollIndicator, { once: true });
+        window.addEventListener('keydown', hideScrollIndicator, { once: true });
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
