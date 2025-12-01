@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste & Tales | Multicuisine Restaurant in Gandhinagar</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Font Setup */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        :root {
+            --primary-color: #A34E3F; /* Deep Red/Brown for warmth */
+            --secondary-color: #F8EFE9; /* Off-White/Cream for background */
+            --accent-color: #5C8374; /* Deep Green for highlights */
+        }
+        
+        /* Apply custom fonts and smooth scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--secondary-color);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        /* Hero Image/Background Style (Parallax Effect) */
+        #hero {
+            background-image: url('https://cdn.pixabay.com/photo/2021/11/29/15/07/chicken-6832808_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+        }
+
+        /* Subtle Scroll Animation Class */
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Sticky and Responsive) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Brand -->
+                <a href="#hero" class="text-2xl font-extrabold text-[var(--primary-color)] tracking-wider">
+                    Taste & Tales
+                </a>
+                
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex space-x-6 text-gray-700 font-medium">
+                    <a href="#about" class="hover:text-[var(--primary-color)] transition duration-300">Our Story</a>
+                    <a href="#menu" class="hover:text-[var(--primary-color)] transition duration-300">Menu</a>
+                    <a href="#reviews" class="hover:text-[var(--primary-color)] transition duration-300">Reviews</a>
+                    <a href="#contact" class="hover:text-[var(--primary-color)] transition duration-300">Contact</a>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex items-center space-x-3">
+                    <a href="#reserve" class="hidden sm:inline-flex px-4 py-2 text-sm font-semibold text-white bg-[var(--accent-color)] rounded-full shadow-md hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
+                        <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> Reserve a Seat
+                    </a>
+                    <a href="#order" class="px-4 py-2 text-sm font-semibold text-[var(--primary-color)] border border-[var(--primary-color)] rounded-full hover:bg-[var(--primary-color)] hover:text-white transition duration-300 transform hover:scale-105">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="flex items-center justify-center text-center p-8">
+            <div class="max-w-4xl bg-black/40 p-8 md:p-12 rounded-xl shadow-2xl backdrop-blur-sm fade-in-scroll">
+                <span class="text-lg font-semibold text-white tracking-widest uppercase">
+                    Multicuisine | Fine Dining | Late Night Cravings
+                </span>
+                <h1 class="text-6xl md:text-8xl font-extrabold text-white my-4 leading-tight">
+                    Taste & Tales
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mt-4 mb-8 font-light italic">
+                    "It’s 11:45 pm and suddenly your stomach remembers every food you’ve ever loved. Taste & Tales understands the assignment."
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#order" class="flex items-center justify-center px-8 py-4 bg-[var(--primary-color)] text-white font-bold text-lg rounded-full shadow-lg transition duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <i data-lucide="shopping-cart" class="w-5 h-5 mr-3"></i> Quick Order
+                    </a>
+                    <a href="#reserve" class="flex items-center justify-center px-8 py-4 bg-white text-[var(--primary-color)] font-bold text-lg rounded-full shadow-lg transition duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <i data-lucide="utensils" class="w-5 h-5 mr-3"></i> Book a Table
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT/OUR STORY SECTION -->
+        <section id="about" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Content: Ratings & Highlights -->
+                <div class="fade-in-scroll">
+                    <h2 class="text-5xl font-extrabold mb-6">The Essence of Our Kitchen</h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        We blend the finest global flavors with the warmth of local hospitality. From comforting classics to innovative fusion, every dish at Taste & Tales is a new story waiting to be savored.
+                    </p>
+
+                    <!-- Rating Card -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100 mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-6xl text-yellow-500">
+                                <i data-lucide="star"></i>
+                            </div>
+                            <div>
+                                <p class="text-4xl font-bold text-[var(--primary-color)]">4.7 / 5</p>
+                                <p class="text-sm text-gray-500">(Based on 1,063 Reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Highlights -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 text-gray-700 p-3 bg-white rounded-lg shadow-sm transform hover:scale-[1.02] transition duration-300">
+                            <i data-lucide="bike" class="w-5 h-5 text-[var(--accent-color)]"></i>
+                            <span class="font-medium">No-Contact Delivery</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-700 p-3 bg-white rounded-lg shadow-sm transform hover:scale-[1.02] transition duration-300">
+                            <i data-lucide="heart" class="w-5 h-5 text-red-500"></i>
+                            <span class="font-medium">LGBTQ+ Friendly Space</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-700 p-3 bg-white rounded-lg shadow-sm transform hover:scale-[1.02] transition duration-300">
+                            <i data-lucide="coffee" class="w-5 h-5 text-amber-600"></i>
+                            <span class="font-medium">Open Late (Till 11 PM)</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-700 p-3 bg-white rounded-lg shadow-sm transform hover:scale-[1.02] transition duration-300">
+                            <i data-lucide="car" class="w-5 h-5 text-blue-500"></i>
+                            <span class="font-medium">Drive-Through Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image Illustration -->
+                <div class="fade-in-scroll hidden md:block">
+                    <img src="https://cdn.pixabay.com/photo/2013/02/13/22/43/kitchen-81493_1280.jpg" alt="Chef preparing meal" class="w-full h-auto object-cover rounded-3xl shadow-xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MENU HIGHLIGHTS SECTION -->
+        <section id="menu" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 fade-in-scroll">
+                    <span class="text-base text-[var(--accent-color)] font-semibold uppercase tracking-wider">The Culinary Journey</span>
+                    <h2 class="text-5xl font-extrabold mt-2">Signature Dishes & Must-Trys</h2>
+                </div>
+
+                <!-- Menu Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Item 1: Lasagna (Italian) -->
+                    <div class="bg-[var(--secondary-color)] p-6 rounded-2xl shadow-lg transform hover:shadow-2xl transition duration-300 fade-in-scroll">
+                        <img src="https://cdn.pixabay.com/photo/2024/05/09/10/23/ai-generated-8750450_1280.png" alt="Lasagna" class="w-full h-40 object-cover rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Grandma's Lasagna</h3>
+                        <p class="text-gray-600 text-sm">Rich layers of pasta, slow-cooked Bolognese, and a three-cheese blend. Must try!</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-[var(--primary-color)]">₹599</span>
+                            <button onclick="addToOrder('Lasagna')" class="text-white bg-[var(--accent-color)] px-3 py-1 rounded-full text-sm font-medium hover:bg-opacity-90 transition">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Singapori Noodles (Asian) -->
+                    <div class="bg-[var(--secondary-color)] p-6 rounded-2xl shadow-lg transform hover:shadow-2xl transition duration-300 fade-in-scroll" style="transition-delay: 0.1s;">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/06/16/21/korean-food-709606_1280.jpg" alt="Singapori Noodles" class="w-full h-40 object-cover rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Spicy Singapori Noodles</h3>
+                        <p class="text-gray-600 text-sm">Tossed with exotic vegetables and a vibrant, spicy curry powder sauce.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-[var(--primary-color)]">₹450</span>
+                            <button onclick="addToOrder('Singapori Noodles')" class="text-white bg-[var(--accent-color)] px-3 py-1 rounded-full text-sm font-medium hover:bg-opacity-90 transition">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Veg Manchow Soup (Soup/Chinese) -->
+                    <div class="bg-[var(--secondary-color)] p-6 rounded-2xl shadow-lg transform hover:shadow-2xl transition duration-300 fade-in-scroll" style="transition-delay: 0.2s;">
+                        <img src="https://cdn.pixabay.com/photo/2016/07/07/19/51/soup-1503117_1280.jpg" alt="Manchow Soup" class="w-full h-40 object-cover rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Warm Manchow Soup</h3>
+                        <p class="text-gray-600 text-sm">A comforting, classic favorite served hot with crispy fried noodles.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-[var(--primary-color)]">₹299</span>
+                            <button onclick="addToOrder('Veg Manchow Soup')" class="text-white bg-[var(--accent-color)] px-3 py-1 rounded-full text-sm font-medium hover:bg-opacity-90 transition">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Irish Farmer's Pizza (Continental) -->
+                    <div class="bg-[var(--secondary-color)] p-6 rounded-2xl shadow-lg transform hover:shadow-2xl transition duration-300 fade-in-scroll" style="transition-delay: 0.3s;">
+                        <img src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg" alt="Irish Pizza" class="w-full h-40 object-cover rounded-xl mb-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Irish Farmer's Pizza</h3>
+                        <p class="text-gray-600 text-sm">Thin crust loaded with farm-fresh veggies, creamy pesto, and mozzarella.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-[var(--primary-color)]">₹650</span>
+                            <button onclick="addToOrder('Irish Farmers Pizza')" class="text-white bg-[var(--accent-color)] px-3 py-1 rounded-full text-sm font-medium hover:bg-opacity-90 transition">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 fade-in-scroll">
+                    <a href="#" class="inline-flex items-center px-6 py-3 border border-[var(--accent-color)] text-lg font-semibold rounded-full text-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-white transition duration-300">
+                        View Full Menu (Zomato) <i data-lucide="external-link" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. REVIEWS SECTION -->
+        <section id="reviews" class="py-16 md:py-24 bg-[var(--secondary-color)]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 fade-in-scroll">
+                    <span class="text-base text-[var(--primary-color)] font-semibold uppercase tracking-wider">What Our Guests Say</span>
+                    <h2 class="text-5xl font-extrabold mt-2">1,000+ Happy Tales</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Review 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[var(--primary-color)] transform hover:translate-y-[-5px] transition duration-300 fade-in-scroll">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Great place, good ambiance and quality food at a good price. Must try lasagna."
+                        </p>
+                        <p class="font-semibold text-gray-800">- Happy Customer</p>
+                        <p class="text-sm text-gray-500">Highlight: Food Quality & Value</p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[var(--accent-color)] transform hover:translate-y-[-5px] transition duration-300 fade-in-scroll" style="transition-delay: 0.1s;">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">
+                            "The menu is a fusion of flavors, showcasing creativity and attention to detail."
+                        </p>
+                        <p class="font-semibold text-gray-800">- Jaimin G. (Local Guide)</p>
+                        <p class="text-sm text-gray-500">Highlight: Creative Menu & Ambience</p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[var(--primary-color)] transform hover:translate-y-[-5px] transition duration-300 fade-in-scroll" style="transition-delay: 0.2s;">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500 mr-1"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500 text-yellow-500"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Very good taste and service, good atmosphere, staff. Thanks to you Deepak sir."
+                        </p>
+                        <p class="font-semibold text-gray-800">- Bharat Singh</p>
+                        <p class="text-sm text-gray-500">Highlight: Excellent Service & Staff</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. RESERVATION FORM SECTION -->
+        <section id="reserve" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Image & Text -->
+                <div class="fade-in-scroll hidden md:block">
+                    <img src="https://cdn.pixabay.com/photo/2016/02/10/13/35/hotel-1191718_1280.jpg" alt="Elegant Dining Area" class="w-full h-auto object-cover rounded-3xl shadow-xl">
+                    <p class="mt-4 text-center text-gray-500 italic text-sm">We recommend reserving a table during peak hours (6 PM - 10 PM).</p>
+                </div>
+
+                <!-- Right: Reservation Form -->
+                <div class="p-8 bg-white rounded-3xl shadow-2xl fade-in-scroll">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-[var(--primary-color)]"></i>
+                        <h2 class="text-4xl font-extrabold text-gray-800">Book Your Seat</h2>
+                    </div>
+                    <p class="text-gray-600 mb-6">Secure your spot for a delightful dining experience.</p>
+                    
+                    <form id="reservationForm" class="space-y-4">
+                        <input type="text" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                        <input type="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                        <input type="tel" placeholder="Phone Number (e.g., 075676 78009)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                            <input type="time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                        </div>
+
+                        <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)] text-gray-500">
+                            <option value="" disabled selected>Select Number of Guests</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4+">4 or More People</option>
+                        </select>
+                        
+                        <button type="submit" class="w-full flex items-center justify-center p-4 bg-[var(--primary-color)] text-white font-bold text-lg rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01]">
+                            Confirm Reservation
+                        </button>
+                    </form>
+                    <div id="reservationMessage" class="mt-4 p-3 bg-green-100 text-green-700 rounded-lg hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ORDER NOW FORM SECTION -->
+        <section id="order" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-5 gap-12">
+                    
+                    <!-- Left: Menu/Cart Preview (2/5 columns) -->
+                    <div class="md:col-span-2 p-6 bg-[var(--secondary-color)] rounded-3xl shadow-xl h-full fade-in-scroll">
+                        <h3 class="text-3xl font-extrabold text-gray-800 mb-4 flex items-center">
+                            <i data-lucide="list-ordered" class="w-6 h-6 mr-3 text-[var(--accent-color)]"></i> Your Order
+                        </h3>
+                        <div id="orderList" class="space-y-3 min-h-[150px] max-h-[400px] overflow-y-auto pr-2">
+                            <!-- Items will be added here by JS -->
+                            <p class="text-gray-500 italic text-center pt-8" id="emptyCartMessage">Your cart is empty. Add a dish from the menu!</p>
+                        </div>
+                        <div class="border-t border-gray-300 mt-4 pt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-800">Total Items:</span>
+                            <span class="text-xl font-bold text-[var(--primary-color)]" id="totalItems">0</span>
+                        </div>
+                        <button onclick="clearOrder()" class="w-full mt-4 text-sm text-red-500 hover:text-red-700 transition">Clear Order</button>
+                    </div>
+
+                    <!-- Right: Delivery/Contact Form (3/5 columns) -->
+                    <div class="md:col-span-3 p-8 bg-white rounded-3xl shadow-2xl border-t-4 border-[var(--primary-color)] fade-in-scroll">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i data-lucide="package" class="w-8 h-8 text-[var(--primary-color)]"></i>
+                            <h2 class="text-4xl font-extrabold text-gray-800">Delivery Details</h2>
+                        </div>
+                        <p class="text-gray-600 mb-6">We offer fast, no-contact delivery to the Gandhinagar area.</p>
+
+                        <form id="orderForm" class="space-y-4">
+                            <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                            <input type="tel" placeholder="Mobile Number" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]">
+                            <textarea placeholder="Delivery Address (e.g., House No, Street, Landmark)" rows="3" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent-color)]"></textarea>
+                            
+                            <div class="flex items-center space-x-4">
+                                <label for="deliveryType" class="font-medium text-gray-700">Service Type:</label>
+                                <select id="deliveryType" class="p-2 border border-gray-300 rounded-lg">
+                                    <option value="delivery">Delivery</option>
+                                    <option value="pickup">Drive-Through Pickup</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="w-full flex items-center justify-center p-4 bg-[var(--accent-color)] text-white font-bold text-lg rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01]">
+                                Place Order
+                            </button>
+                        </form>
+                        <div id="orderMessage" class="mt-4 p-3 bg-yellow-100 text-yellow-700 rounded-lg hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT & LOCATION SECTION -->
+        <section id="contact" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Left: Contact Details -->
+                <div class="fade-in-scroll">
+                    <span class="text-base text-[var(--accent-color)] font-semibold uppercase tracking-wider">Reach Out</span>
+                    <h2 class="text-5xl font-extrabold mt-2 mb-6">Find Us & Get in Touch</h2>
+
+                    <div class="space-y-6 text-gray-700 text-lg">
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-[var(--primary-color)] flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Address</h4>
+                                <p>PDPU Rd, near Gift city, Gandhinagar, Gujarat 382426</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-[var(--primary-color)] flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Hours</h4>
+                                <p>Open Daily · Closes 11:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="phone" class="w-6 h-6 text-[var(--primary-color)] flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Call Us</h4>
+                                <a href="tel:07567678009" class="hover:text-[var(--accent-color)] transition">075676 78009</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Contact Now) -->
+                    <div class="mt-10 p-6 bg-white rounded-2xl shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Send us a Message</h3>
+                        <form id="contactForm" class="space-y-3">
+                            <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg">
+                            <input type="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg">
+                            <textarea placeholder="Your Message or Enquiry" rows="3" required class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+                            <button type="submit" class="w-full p-3 bg-[var(--primary-color)] text-white font-semibold rounded-lg hover:bg-opacity-90 transition">
+                                Send Enquiry
+                            </button>
+                        </form>
+                        <div id="contactMessage" class="mt-4 p-3 bg-blue-100 text-blue-700 rounded-lg hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Map Placeholder -->
+                <div class="fade-in-scroll">
+                    <!-- Placeholder for Google Map -->
+                    <div class="w-full h-96 bg-gray-200 rounded-3xl shadow-xl flex items-center justify-center border-4 border-white overflow-hidden">
+                        <img src="https://cdn.pixabay.com/photo/2020/10/14/07/15/map-5653495_1280.jpg" alt="Map Location" class="w-full h-full object-cover opacity-75">
+                        <div class="absolute text-center bg-white/70 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                            <p class="font-bold text-gray-800">Location Placeholder</p>
+                            <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="text-sm text-[var(--accent-color)] hover:underline">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-xl font-extrabold mb-2">Taste & Tales</p>
+            <p class="text-sm text-gray-400">&copy; 2025 Taste & Tales. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-[var(--primary-color)] transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary-color)] transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary-color)] transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Animations and Form Handling -->
+    <script>
+        // 1. Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 2. Scroll Animation Logic
+        const elements = document.querySelectorAll('.fade-in-scroll');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        elements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // 3. Form Submission Handling (Prevent actual submission and show message)
+        
+        // Helper function to show form message
+        function showMessage(elementId, message, type) {
+            const el = document.getElementById(elementId);
+            el.textContent = message;
+            el.className = `mt-4 p-3 rounded-lg ${type}`;
+            el.classList.remove('hidden');
+            setTimeout(() => {
+                el.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Reservation Form
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            showMessage(
+                'reservationMessage', 
+                'Reservation received! We will confirm your table shortly via phone or email.', 
+                'bg-green-100 text-green-700'
+            );
+            this.reset();
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            showMessage(
+                'contactMessage', 
+                'Thank you for your message! We will get back to you within 24 hours.', 
+                'bg-blue-100 text-blue-700'
+            );
+            this.reset();
+        });
+
+        // 4. Order Form / Cart Logic
+        let currentOrder = {};
+
+        const orderList = document.getElementById('orderList');
+        const totalItemsEl = document.getElementById('totalItems');
+        const emptyCartMessageEl = document.getElementById('emptyCartMessage');
+
+        function updateCartUI() {
+            orderList.innerHTML = '';
+            let totalCount = 0;
+            const itemNames = Object.keys(currentOrder);
+
+            if (itemNames.length === 0) {
+                emptyCartMessageEl.classList.remove('hidden');
+            } else {
+                emptyCartMessageEl.classList.add('hidden');
+                
+                itemNames.forEach(item => {
+                    const count = currentOrder[item];
+                    totalCount += count;
+                    
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'flex justify-between items-center p-2 bg-white rounded-lg shadow-sm';
+                    itemDiv.innerHTML = `
+                        <span class="font-medium text-gray-800">${item}</span>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[var(--primary-color)] font-bold">x${count}</span>
+                            <button onclick="removeItem('${item}')" class="text-red-500 hover:text-red-700 text-sm p-1 rounded-full bg-red-100 transition">
+                                <i data-lucide="x" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    `;
+                    orderList.appendChild(itemDiv);
+                });
+                lucide.createIcons(); // Re-render icons for dynamically added elements
+            }
+            totalItemsEl.textContent = totalCount;
+        }
+
+        window.addToOrder = function(itemName) {
+            currentOrder[itemName] = (currentOrder[itemName] || 0) + 1;
+            updateCartUI();
+        }
+        
+        window.removeItem = function(itemName) {
+            if (currentOrder[itemName] > 1) {
+                currentOrder[itemName] -= 1;
+            } else {
+                delete currentOrder[itemName];
+            }
+            updateCartUI();
+        }
+
+        window.clearOrder = function() {
+            currentOrder = {};
+            updateCartUI();
+        }
+
+        // Order Submission
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const itemsCount = Object.keys(currentOrder).length;
+
+            if (itemsCount === 0) {
+                showMessage(
+                    'orderMessage', 
+                    'Please add at least one item to your order before submitting!', 
+                    'bg-red-100 text-red-700'
+                );
+                return;
+            }
+
+            const itemsList = Object.keys(currentOrder).map(item => `${item} x${currentOrder[item]}`).join(', ');
+            
+            showMessage(
+                'orderMessage', 
+                `Order for ${itemsCount} item(s) (${itemsList}) received! We will call you soon to confirm the delivery.`, 
+                'bg-yellow-100 text-yellow-700'
+            );
+            
+            this.reset();
+            clearOrder();
+        });
+
+        // Initialize cart on load
+        updateCartUI();
+
+    </script>
+</body>
+</html>
